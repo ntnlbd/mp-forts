@@ -1,0 +1,33 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    <div class="body">
+
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          <article class="{{page.slug}}" itemscope itemtype="{{page.itemtype}}">
+            {{ content }}
+          </article>
+        </div>
+      </main>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ['Corben:400,700', 'Anton']
+        }
+      });
+    </script>
+
+  </body>
+
+</html>
