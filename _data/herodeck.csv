@@ -1,2 +1,4 @@
-Name, Attack, Defense, Image
-Turtlo, 1, 1, img/heros/turtlo.jpg
+"name","attack","defense","image"
+"Fat Kid","0","2",""
+"Mean Girl","2","0",""
+"Bully","1","1",""

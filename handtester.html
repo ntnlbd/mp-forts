@@ -1,0 +1,14 @@
+---
+template: default
+title: Hand tester
+---
+
+{{ site.data.herodeck[2] | jsonify }}
+
+{% for hero in site.data.herodeck  %}
+  <ul>
+    <li>Name: {{hero.name}}</li>
+    <li>Attack: {{hero.attack}}</li>
+    <li>Defence: {{hero.defense}}</li>
+  </ul>
+{% endfor %}
