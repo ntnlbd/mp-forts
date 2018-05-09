@@ -1,0 +1,23 @@
+
+
+
+  {% assign p1HeroMin = 1 %}
+  {% assign p1HeroMax = 16 %}
+  {% assign diff = p1HeroMax | minus: p1HeroMin %}
+  {% assign p1Hero = "now" | date: "%N" | modulo: diff | plus: p1HeroMin %}
+
+  {% for hero in site.data.herodeck  limit: 1 offset: p1Hero %}
+    <div class="card">
+      <div class="card-image" style="background-image:url('http://via.placeholder.com/220x70');"></div>
+      <div class="card-info">
+        <h3>{{hero.name}}</h3>
+      </div>
+      <div class="card-stats">
+        <ul>
+          <li><span class="i sword"></span> {{hero.attack}}</li>
+          <li><span class="i shield"></span> {{hero.defense}}</li>
+        </ul>
+      </div>
+    </div>
+
+  {% endfor %}

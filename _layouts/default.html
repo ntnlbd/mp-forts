@@ -6,29 +6,33 @@
   {% include head.html %}
 
   <body>
+    <div class="playarea-wrapper">
 
-    <div class="body">
+      <div class="hero-row">
+        {% include p1-hero.html %}
+      </div>
+      <div class="fort-row">
+        {% include p1-hero.html %}
+      </div>
+      <div class="defence-row">
+        {% include p1-hero.html %}
+      </div>
 
-      <main class="page-content" aria-label="Content">
-        <div class="wrapper">
-          <article itemscope itemtype="{{page.itemtype}}">
 
-            {% assign min = 1 %}
-            {% assign max = 16 %}
-            {% assign diff = max | minus: min %}
-            {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+      <div class="monsters-row">
+        {% include p1-hero.html %}
+      </div>
 
-            {% for hero in site.data.herodeck  limit: 1 offset: randomNumber %}
-              <ul>
-                <li>Name: {{hero.name}}</li>
-                <li>Attack: {{hero.attack}}</li>
-                <li>Defence: {{hero.defense}}</li>
-              </ul>
-            {% endfor %}
 
-          </article>
-        </div>
-      </main>
+      <div class="defence-row">
+        {% include p1-hero.html %}
+      </div>
+      <div class="fort-row">
+        {% include p1-hero.html %}
+      </div>
+      <div class="hero-row">
+        {% include p1-hero.html %}
+      </div>
 
     </div>
 
