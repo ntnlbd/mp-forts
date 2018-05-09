@@ -7,8 +7,9 @@
   {% assign p1Hero = "now" | date: "%N" | modulo: diff | plus: p1HeroMin %}
 
   {% for hero in site.data.herodeck  limit: 1 offset: p1Hero %}
+  
     <div class="card">
-      <div class="card-image" style="background-image:url('http://via.placeholder.com/220x70');"></div>
+      <div class="card-image" style="background-image:url('http://via.placeholder.com/150x70');"></div>
       <div class="card-info">
         <h3>{{hero.name}}</h3>
       </div>
