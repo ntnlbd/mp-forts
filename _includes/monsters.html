@@ -1,0 +1,24 @@
+
+
+
+  {% assign monstersMin = 1 %}
+  {% assign monstersMax = 15 %}
+  {% assign diff = monstersMax | minus: monstersMin %}
+  {% assign monstersRandom = "now" | date: "%N" | modulo: diff | plus: monstersMin %}
+
+
+  {% for item in site.data.monstersdeck  limit: 3 offset: monstersRandom %}
+
+    <div class="card">
+      <div class="card-image" style="background-image:url('http://via.placeholder.com/150x70');"></div>
+      <div class="card-info">
+        <h3>{{item.name}}</h3>
+      </div>
+      <div class="card-stats">
+        <ul>
+          <li><span class="i sword"></span> {{item.attack}} </li>
+        </ul>
+      </div>
+    </div>
+
+  {% endfor %}

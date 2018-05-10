@@ -25,7 +25,7 @@
 
 
       <div class="monsters row">
-        {% include p1-hero.html %}
+        {% include monsters.html %}
       </div>
 
 
@@ -38,7 +38,10 @@
 
       <div class="hand row">
         {% include p1-hero.html %}
-        {% include p1-hero.html %}
+        <div class="hero-card-wrapper">
+           <h1>Player 2</h1>
+           {% include p1-hero.html %}
+        </div>
       </div>
 
     </div>
